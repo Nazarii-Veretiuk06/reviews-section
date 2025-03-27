@@ -1,167 +1,115 @@
-.feedback-section {
-  padding: 30px 0px;
+.reviews-section * {
+  box-sizing: border-box;
 }
 
-.section-heading {
-  font-family: var(--font-family);
+.reviews-section {
+  padding: 30px 20px;
+}
+
+.reviews-container {
+  max-width: 335px;
+  margin: 0 auto;
+}
+
+.reviews-header {
   font-weight: 600;
   font-size: 32px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: -0.02em;
   color: var(--main);
-  margin-bottom: 40px;
 }
 
-.testimonials-grid {
+.review-list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 20px;
-}
-
-.testimonial-card {
-  border-radius: 30px;
-  padding: 32px 36px;
-  background: var(--cards);
-}
-
-.card-content {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  gap: 20px;
+
+  margin: 40px auto 0;
 }
 
-.customer-name {
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 125%;
-  letter-spacing: -0.02em;
-  text-align: center;
-  color: var(--main);
-  margin-bottom: 8px;
-}
-
-.testimonial-text {
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 129%;
-  letter-spacing: -0.02em;
-  text-align: center;
-  color: rgba(12, 12, 12, 0.4);
-}
-
-.testimonial-card:nth-child(2),
-.testimonial-card:nth-child(3) {
+.review-item {
+  background-color: var(--cards);
+  padding: 32px 36px;
+  border-radius: 30px;
   display: none;
 }
 
-.customer-avatar {
-  margin-bottom: 24px;
+.review-item:nth-child(1) {
+  display: block;
 }
 
-@media (min-width: 768px) {
-  .feedback-section {
-    padding: 40px 0px;
+.time-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 24px;
+}
+
+.reviews-title {
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--main);
+}
+
+.reviews-text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: rgba(12, 12, 12, 0.4);
+}
+
+/* Tab styles */
+@media screen and (min-width: 768px) {
+  .reviews-section {
+    padding: 40px 32px;
   }
 
-  .testimonial-card:nth-child(3) {
-    display: none;
+  .reviews-container {
+    max-width: 704px;
   }
 
-  .testimonial-card:nth-child(2) {
-    display: flex;
+  .review-item:nth-child(2) {
+    display: block;
   }
-
-  .testimonial-card {
-    padding: 32px 36px;
-    width: 344px;
-    height: 272px;
-  }
-
-  .section-heading {
-    font-family: var(--font-family);
+  .reviews-header {
     font-weight: 600;
-    font-size: 48px;
-    line-height: 92%;
+    line-height: 1;
     letter-spacing: -0.02em;
     color: var(--main);
+    font-size: 48px;
   }
-
-  .testimonial-text {
-    font-family: var(--font-family);
+  .reviews-text {
     font-weight: 500;
     font-size: 16px;
-    line-height: 125%;
+    line-height: 1.25;
     letter-spacing: -0.02em;
-    text-align: center;
     color: rgba(12, 12, 12, 0.4);
   }
-
-  .customer-name {
-    font-family: var(--font-family);
-    font-weight: 500;
+  .reviews-title {
     font-size: 18px;
-    line-height: 110%;
-    letter-spacing: -0.02em;
-    text-align: center;
-    color: var(--main);
-  }
-
-  .testimonials-grid {
-    gap: 16px;
+    line-height: 1.1;
   }
 }
 
-@media (min-width: 1280px) {
-  .feedback-section {
-    padding: 50px 0px;
+/* Dektop styles */
+@media screen and (min-width: 1280px) {
+  .reviews-section {
+    padding: 50px 65px;
   }
 
-  .testimonial-card:nth-child(2),
-  .testimonial-card:nth-child(3) {
-    display: flex;
+  .reviews-container {
+    max-width: 1150px;
   }
 
-  .testimonials-grid {
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .testimonial-card {
-    padding: 32px 36px;
-    width: 100%;
-    height: 272px;
-  }
-
-  .section-heading {
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 92%;
-    letter-spacing: -0.02em;
-    color: var(--main);
-  }
-
-  .customer-name {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 110%;
-    letter-spacing: -0.02em;
-    text-align: center;
-    color: var(--main);
-  }
-
-  .testimonial-text {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 125%;
-    letter-spacing: -0.02em;
-    text-align: center;
-    color: rgba(12, 12, 12, 0.4);
+  .review-item:nth-child(3) {
+    display: block;
   }
 }
